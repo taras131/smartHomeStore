@@ -2,6 +2,7 @@ import {Button, Container, Grid, Paper, Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import {useSelector} from "react-redux";
 import CardItem from "../carditem/CardItem";
+import backgroundimg from "../../img/header.jpg";
 
 const useStyles = makeStyles((theme) => ({
     mainFeaturesPost: {
@@ -34,7 +35,7 @@ const Main = () => {
     return(
         <main>
             <Paper className={classes.mainFeaturesPost}
-                   style={{backgroundImage: `url(http://cseng.ru/img/sliderimages/1.jpg)`}}>
+                   style={{backgroundImage: `url(${backgroundimg})`}}>
                 <Container fixed>
                     <div className={classes.overlay}/>
                     <Grid container>

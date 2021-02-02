@@ -12,12 +12,6 @@ const useStyles = makeStyles((theme) => ({
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         minHeight: 900,
-        "&&&:before": {
-            borderBottom: "none"
-        },
-        "&&:after": {
-            borderBottom: "none"
-        }
     },
     mainFeaturesPostContent: {
         position: "relative",
