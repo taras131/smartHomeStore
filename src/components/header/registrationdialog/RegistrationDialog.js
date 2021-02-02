@@ -5,7 +5,7 @@ import {
     DialogActions,
     DialogContent,
     DialogContentText,
-    DialogTitle,
+    DialogTitle, Hidden,
     TextField
 } from "@material-ui/core";
 
@@ -24,7 +24,10 @@ const RegistrationDialog = () => {
     }
     return (
         <>
-            <Button color="secondary" variant="contained" onClick={onRegistrationClick}>РЕГИСТРАЦИЯ</Button>
+            <Hidden smDown>
+                <Button color="secondary" variant="contained" onClick={onRegistrationClick}>РЕГИСТРАЦИЯ</Button>
+            </Hidden>
+
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
                 <DialogTitle id="form-dialog-title">
                     РЕГИСТРАЦИЯ

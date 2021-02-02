@@ -39,7 +39,7 @@ const Main = () => {
                 <Container fixed>
                     <div className={classes.overlay}/>
                     <Grid container>
-                        <Grid item md={6}>
+                        <Grid item xl ={6} md={8}  sm={10}  xs={12}>
                             <div className={classes.mainFeaturesPostContent}>
                                 <Typography component="h1" variant="h4" color="inherit" gutterBottom>
                                     УМНЫЕ СМСТЕМЫ ДЛЯ КОМФОРТА, ЭКОНОМИИ И БЕЗОПАСНОСТИ.
