@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751ab3bf-1283-4481-960f-11fd57ad8877" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/cart/EmptyCart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cart/Order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/carditem/CardItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/carditem/CardItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/Cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart/CartItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/CartItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/carticon/CartIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/carticon/CartIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/entrancedialog/EntranceDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/entrancedialog/EntranceDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/registrationdialog/RegistrationDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/registrationdialog/RegistrationDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/CartSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/CartSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/cardReducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/cardReducer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/cartReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/cartReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +65,7 @@
       <workItem from="1612170674450" duration="1902000" />
       <workItem from="1612172598852" duration="9422000" />
       <workItem from="1612182238218" duration="23406000" />
-      <workItem from="1612252987316" duration="8602000" />
+      <workItem from="1612252987316" duration="9837000" />
     </task>
     <servers />
   </component>
