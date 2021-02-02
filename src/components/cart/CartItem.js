@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
     purple: {
         color: theme.palette.getContrastText(deepPurple[500]),
         backgroundColor: deepPurple[500],
-        marginRight: theme.spacing(2)
     },
     plus: {
         marginRight: theme.spacing(2)
@@ -43,12 +42,13 @@ const CartItem = (props) => {
                 <img className={classes.img} src={props.url} alt=""/>
             </ListItemIcon>
             <ListItemText className={classes.title} primary={props.name}/>
-            <Avatar variant="square" className={classes.purple}>
-                {props.count}
-            </Avatar>
+
             <IconButton disabled = {+props.count === 1} onClick={onMinusClick} aria-label="delete">
                 <IndeterminateCheckBoxTwoToneIcon>add_circle</IndeterminateCheckBoxTwoToneIcon>
             </IconButton>
+            <Avatar variant="square" className={classes.purple}>
+                {props.count}
+            </Avatar>
             <IconButton onClick={onPlusClick} aria-label="delete">
                 <AddBoxTwoToneIcon  style={{color: green[500]}}>add_circle</AddBoxTwoToneIcon>
             </IconButton>

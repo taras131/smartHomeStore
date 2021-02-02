@@ -42,7 +42,7 @@ const Main = () => {
                         <Grid item xl ={6} md={8}  sm={10}  xs={12}>
                             <div className={classes.mainFeaturesPostContent}>
                                 <Typography component="h1" variant="h4" color="inherit" gutterBottom>
-                                    УМНЫЕ СМСТЕМЫ ДЛЯ КОМФОРТА, ЭКОНОМИИ И БЕЗОПАСНОСТИ.
+                                    УМНЫЕ СИСТЕМЫ ДЛЯ КОМФОРТА, ЭКОНОМИИ И БЕЗОПАСНОСТИ.
                                 </Typography>
                                 <Typography variant="h5" color="inherit" paragraph>
                                     MAKAROFF Company является поставщиком современных интеллектуальных и
