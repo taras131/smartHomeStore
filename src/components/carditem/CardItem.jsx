@@ -49,7 +49,7 @@ const CardItem = (props) => {
                         Просмотреть
                     </Button>
                     <Button onClick={onAddClick} size="small" color="primery">
-                        Заказать
+                        В корзину
                     </Button>
                     <LayerIcon/>
                     <PlayCircleFilledIcon/>
