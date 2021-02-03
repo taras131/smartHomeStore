@@ -1,4 +1,4 @@
-import {Button, Card, CardActions, CardContent, CardMedia, Grid, Typography} from "@material-ui/core";
+import {Button, Card, CardActions, CardContent, CardMedia, Grid, Grow, Slide, Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import LayerIcon from '@material-ui/icons/Layers';
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
@@ -28,34 +28,38 @@ const CardItem = (props) => {
         dispatch(addCart({...props}))
     }
     return (
-        <Grid item xs={12} sm={6} md={4}>
-            <Card className={classes.card}>
-                <CardMedia className={classes.cardMedia}
-                           image={props.url}
-                           title="image title"/>
-                <CardContent className={classes.cardContent}>
-                    <Typography variant="h5" gutterBottom>
-                        {props.name}
-                    </Typography>
-                    <Typography>
-                        {props.discription}
-                    </Typography>
-                    <Typography variant="h6" className={classes.cardPrice}>
-                        Цена: {props.price} рублей
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button size="small" color="primery">
-                        Просмотреть
-                    </Button>
-                    <Button onClick={onAddClick} size="small" color="primery">
-                        В корзину
-                    </Button>
-                    <LayerIcon/>
-                    <PlayCircleFilledIcon/>
-                </CardActions>
-            </Card>
-        </Grid>
+        < Grow in="true" style={{ transformOrigin: '0 0 0' }}
+               {...(true ? { timeout: 1000*props.id } : {})}>
+            <Grid item xs={12} sm={6} md={4}>
+                <Card className={classes.card}>
+                    <CardMedia className={classes.cardMedia}
+                               image={props.url}
+                               title="image title"/>
+                    <CardContent className={classes.cardContent}>
+                        <Typography variant="h5" gutterBottom>
+                            {props.name}
+                        </Typography>
+                        <Typography>
+                            {props.discription}
+                        </Typography>
+                        <Typography variant="h6" className={classes.cardPrice}>
+                            Цена: {props.price} рублей
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <Button size="small" color="primery">
+                            Просмотреть
+                        </Button>
+                        <Button onClick={onAddClick} size="small" color="primery">
+                            В корзину
+                        </Button>
+                        <LayerIcon/>
+                        <PlayCircleFilledIcon/>
+                    </CardActions>
+                </Card>
+            </Grid>
+        </Grow>
+
     )
 }
 

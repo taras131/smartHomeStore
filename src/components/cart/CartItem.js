@@ -1,4 +1,4 @@
-import {Avatar, Icon, ListItem, ListItemIcon, ListItemText} from "@material-ui/core";
+import {Avatar, Grow, Icon, ListItem, ListItemIcon, ListItemText, Slide} from "@material-ui/core";
 import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 import {deepPurple, green} from '@material-ui/core/colors';
@@ -37,27 +37,32 @@ const CartItem = (props) => {
     }
     const classes = useStyles();
     return (
-        <ListItem button>
-            <ListItemIcon>
-                <img className={classes.img} src={props.url} alt=""/>
-            </ListItemIcon>
-            <ListItemText className={classes.title} primary={props.name}/>
+        <Slide direction="up" in="true" mountOnEnter unmountOnExit style={{ transformOrigin: '0 0 0' }}
+               {...(true ? { timeout: 300*props.id } : {})}>
+            <ListItem button>
+                <ListItemIcon>
+                    <img className={classes.img} src={props.url} alt=""/>
+                </ListItemIcon>
+                <ListItemText className={classes.title} primary={props.name}/>
 
-            <IconButton disabled = {+props.count === 1} onClick={onMinusClick} aria-label="delete">
-                <IndeterminateCheckBoxTwoToneIcon>add_circle</IndeterminateCheckBoxTwoToneIcon>
-            </IconButton>
-            <Avatar variant="square" className={classes.purple}>
-                {props.count}
-            </Avatar>
-            <IconButton onClick={onPlusClick} aria-label="delete">
-                <AddBoxTwoToneIcon  style={{color: green[500]}}>add_circle</AddBoxTwoToneIcon>
-            </IconButton>
-            <IconButton onClick={onDeleteClick} aria-label="delete">
-                <DeleteForeverTwoToneIcon style={{color: green[500]}}>add_circle</DeleteForeverTwoToneIcon>
-            </IconButton>
+                <IconButton disabled={+props.count === 1} onClick={onMinusClick} aria-label="delete">
+                    <IndeterminateCheckBoxTwoToneIcon>add_circle</IndeterminateCheckBoxTwoToneIcon>
+                </IconButton>
+                <Avatar variant="square" className={classes.purple}>
+                    {props.count}
+                </Avatar>
+                <IconButton onClick={onPlusClick} aria-label="delete">
+                    <AddBoxTwoToneIcon style={{color: green[500]}}>add_circle</AddBoxTwoToneIcon>
+                </IconButton>
+                <IconButton onClick={onDeleteClick} aria-label="delete">
+                    <DeleteForeverTwoToneIcon style={{color: green[500]}}>add_circle</DeleteForeverTwoToneIcon>
+                </IconButton>
+            </ListItem>
+        </Slide>
 
-        </ListItem>
-    )
+
+
+)
 }
 
 export default CartItem

@@ -2,7 +2,7 @@ import {
     AppBar,
     Box, Button, ButtonGroup,
     Container, Hidden,
-    IconButton, Tab, Tabs,
+    IconButton, MenuItem, Tab, Tabs,
     Toolbar,
     Typography, withWidth
 } from "@material-ui/core";
@@ -60,8 +60,8 @@ const Header = (props) => {
                             <ButtonGroup variant="contained" color="primary"
                                          aria-label="contained primary button group">
                                 <Button component={RouterLink} to="/">Главная</Button>
-                                <Button>Проекты</Button>
-                                <Button>Контакты</Button>
+                                <Button component={RouterLink} to="/project/" >Проекты</Button>
+                                <Button component={RouterLink} to="/contacts/">Контакты</Button>
                                 <Button component={RouterLink} to="/cart">Корзина</Button>
                             </ButtonGroup>
                         </Box>

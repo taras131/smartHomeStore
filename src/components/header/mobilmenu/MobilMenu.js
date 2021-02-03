@@ -45,10 +45,10 @@ const MobilMenu = () => {
                     <MenuItem onClick={onMenuClick} className={classes.menuItem} component={RouterLink} to="/">
                         <Typography variant="h4">Главная</Typography>
                     </MenuItem>
-                    <MenuItem onClick={onMenuClick} className={classes.menuItem}>
-                        <Typography variant="h4">Проекты</Typography>
+                    <MenuItem onClick={onMenuClick} className={classes.menuItem} component={RouterLink} to="/project/">
+                        <Typography  variant="h4">Проекты</Typography>
                     </MenuItem>
-                    <MenuItem  onClick={onMenuClick}className={classes.menuItem}>
+                    <MenuItem  onClick={onMenuClick}className={classes.menuItem} component={RouterLink} to="/contacts/">
                         <Typography variant="h4">Контакты</Typography>
                     </MenuItem>
                     <MenuItem onClick={onMenuClick} className={classes.menuItem} component={RouterLink} to="/cart">

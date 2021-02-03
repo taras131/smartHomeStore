@@ -3,6 +3,8 @@ import {makeStyles} from "@material-ui/core/styles";
 import {useSelector} from "react-redux";
 import CardItem from "../carditem/CardItem";
 import backgroundimg from "../../img/header.jpg";
+import {Link as RouterLink} from "react-router-dom";
+import React from "react";
 
 const useStyles = makeStyles((theme) => ({
     mainFeaturesPost: {
@@ -48,7 +50,7 @@ const Main = () => {
                                     MAKAROFF Company является поставщиком современных интеллектуальных и
                                     энергоэффективных решений в сфере автоматизации зданий.
                                 </Typography>
-                                <Button color="secondary" variant="contained">Узнать больше...</Button>
+                                <Button component={RouterLink} to="/project/" color="secondary" variant="contained">Узнать больше...</Button>
                             </div>
                         </Grid>
                     </Grid>
@@ -72,7 +74,7 @@ const Main = () => {
                                 <Button variant="contained" color="primary">Заказать</Button>
                             </Grid>
                             <Grid item>
-                                <Button variant="outlined" color="primary">Узнать больше</Button>
+                                <Button component={RouterLink} to="/contacts/" variant="outlined" color="primary">Связаться с нами</Button>
                             </Grid>
                         </Grid>
                     </div>
