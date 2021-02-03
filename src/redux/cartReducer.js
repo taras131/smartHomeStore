@@ -20,6 +20,7 @@ const cartReducer = (state = initialState, action) => {
         case DELETE_ITEM_CART:
             let temporallyCartList = new Map(state.cartList)
             temporallyCartList.delete(action.id)
+            console.log(temporallyCartList)
             return {...state, cartList: temporallyCartList}
         case PLUS_ITEM_CART:
             return {...state,cartList: new Map(state.cartList).set(action.id,

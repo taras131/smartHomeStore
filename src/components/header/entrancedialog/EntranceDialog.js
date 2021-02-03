@@ -9,8 +9,11 @@ import {
     TextField
 } from "@material-ui/core";
 import {useState} from "react";
+import {useDispatch} from "react-redux";
+import {setAuth} from "../../../redux/authReducer";
 
 const EntranceDialog = () => {
+    const dispatch = useDispatch()
     const [open, setOpen] = useState(false)
     const onEntranceClick = () => {
         setOpen(true)
@@ -18,9 +21,13 @@ const EntranceDialog = () => {
     const handleClose = () => {
         setOpen(false)
     }
+    const handleEntrance = () => {
+        setOpen(false)
+        dispatch(setAuth(true))
+    }
     return (
         <>
-            <Button color="inherit" variant="outlined" onClick={onEntranceClick}>ВХОД</Button>
+            <Button color="inherit" variant="outlined" onClick={onEntranceClick}>ВОЙТИ</Button>
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
                 <DialogTitle id="form-dialog-title">
                     Вход
@@ -32,7 +39,7 @@ const EntranceDialog = () => {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose} color="primary">Отмена</Button>
-                    <Button onClick={handleClose} color="primary">Войти</Button>
+                    <Button onClick={handleEntrance} color="primary">Войти</Button>
                 </DialogActions>
             </Dialog>
         </>

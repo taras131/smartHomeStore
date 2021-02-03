@@ -1,13 +1,15 @@
 import {combineReducers, createStore} from "redux";
-import cardReducer from "./cardReducer";
 import cartReducer from "./cartReducer";
 import projectReducer from "./projecrReducer";
+import authReducer from "./authReducer";
+import catalogReducer from "./catalogReducer";
 
 
 let reducersList = combineReducers({
-    cardInfo: cardReducer,
+    catalogInfo: catalogReducer,
     cartInfo: cartReducer,
-    projectInfo: projectReducer
+    projectInfo: projectReducer,
+    authInfo: authReducer
 })
 let store = createStore(reducersList);
 export default store

@@ -5,7 +5,7 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import CartItem from "./CartItem";
 import {useSelector} from "react-redux";
-import {getCartList, getCountAllCart, getSumAllPriceCart} from "../../redux/CartSelector";
+import {getCartList, getCountAllCart, getSumAllPriceCart} from "../../redux/cartSelector";
 import EmptyCart from "./EmptyCart";
 import {Link as RouterLink} from "react-router-dom";
 import Order from "./Order";
@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(2)
     }
 }));
-
 const Cart = () => {
     const classes = useStyles();
     const cartList = useSelector(state => getCartList(state))
@@ -39,7 +38,6 @@ const Cart = () => {
                         {cartItems}
                     </List>
                     <Divider/>
-
                 </div>
             </Grid>
             <Grid container spacing={5} justify="center">

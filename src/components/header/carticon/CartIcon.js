@@ -5,8 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import {NavLink} from "react-router-dom";
 import {useSelector} from "react-redux";
-import {getCountAllCart} from "../../../redux/CartSelector";
-
+import {getCountAllCart} from "../../../redux/cartSelector";
 
 const StyledBadge = withStyles((theme) => ({
     badge: {

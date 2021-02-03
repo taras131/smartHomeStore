@@ -2,11 +2,9 @@ import {
     AppBar,
     Box, Button, ButtonGroup,
     Container, Hidden,
-    IconButton, MenuItem, Tab, Tabs,
     Toolbar,
     Typography, withWidth
 } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
 import {makeStyles} from "@material-ui/core/styles";
 import EntranceDialog from "./entrancedialog/EntranceDialog";
 import RegistrationDialog from "./registrationdialog/RegistrationDialog";
@@ -15,6 +13,9 @@ import {Link as RouterLink} from 'react-router-dom';
 import Link from '@material-ui/core/Link';
 import MobilMenu from "./mobilmenu/MobilMenu";
 import React from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {setAuth} from "../../redux/authReducer";
+import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -32,12 +33,14 @@ const useStyles = makeStyles((theme) => ({
     }
 
 }))
-// <IconButton edge="start" color="inherit" aria-label="menu" className={classes.menuButton}>
-//    <MenuIcon/>
-//</IconButton>
 const Header = (props) => {
     const classes = useStyles();
     const {width} = props;
+    const isAuth = useSelector(state => state.authInfo.isAuth)
+    const dispatch = useDispatch()
+    const onExitClick = () => {
+        dispatch(setAuth(false))
+    }
     return (
         <AppBar>
             <Container position="fixed">
@@ -60,9 +63,10 @@ const Header = (props) => {
                             <ButtonGroup variant="contained" color="primary"
                                          aria-label="contained primary button group">
                                 <Button component={RouterLink} to="/">Главная</Button>
-                                <Button component={RouterLink} to="/project/" >Проекты</Button>
+                                <Button component={RouterLink} to="/catalog/">Каталог</Button>
+                                <Button component={RouterLink} to="/project/">Проекты</Button>
                                 <Button component={RouterLink} to="/contacts/">Контакты</Button>
-                                <Button component={RouterLink} to="/cart">Корзина</Button>
+
                             </ButtonGroup>
                         </Box>
                     </Hidden>
@@ -71,10 +75,16 @@ const Header = (props) => {
                             <CartIcon/>
                         </Box>
                     </Link>
-                    <Box mr={3}>
-                        <EntranceDialog/>
-                    </Box>
-                    <RegistrationDialog {...width}/>
+                    {!isAuth
+                        ? <>
+                            <Box mr={3}> <EntranceDialog/> </Box>
+                            <RegistrationDialog {...width}/>
+                        </>
+                        : <>
+                            <AccessibilityNewIcon color="secondary" style = {{paddingRight: 10}}/>
+                            <Button color="inherit" variant="outlined" onClick={onExitClick}>ВЫЙТИ</Button>
+                        </>
+                    }
                 </Toolbar>
             </Container>
         </AppBar>

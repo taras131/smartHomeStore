@@ -1,9 +1,19 @@
-import {Button, Card, CardActions, CardContent, CardMedia, Grid, Grow, Slide, Typography} from "@material-ui/core";
+import {
+    Button,
+    Card,
+    CardActions,
+    CardContent,
+    CardMedia,
+    Grid,
+    Grow,
+    Typography
+} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
-import LayerIcon from '@material-ui/icons/Layers';
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 import {useDispatch} from "react-redux";
 import {addCart} from "../../redux/cartReducer";
+import {Link as RouterLink} from "react-router-dom";
+import React from "react";
 
 const useStyles = makeStyles((theme) => ({
     cardMedia: {
@@ -29,7 +39,7 @@ const CardItem = (props) => {
     }
     return (
         < Grow in="true" style={{ transformOrigin: '0 0 0' }}
-               {...(true ? { timeout: 1000*props.id } : {})}>
+               {...(true && { timeout: 1000*props.id })}>
             <Grid item xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
                     <CardMedia className={classes.cardMedia}
@@ -47,13 +57,12 @@ const CardItem = (props) => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button size="small" color="primery">
-                            Просмотреть
+                        <Button component={RouterLink} to={`/catalog/${props.id}`} size="small" color="primary">
+                            Подробнее
                         </Button>
-                        <Button onClick={onAddClick} size="small" color="primery">
+                        <Button variant="contained" color = "primary" onClick={onAddClick} size="small" >
                             В корзину
                         </Button>
-                        <LayerIcon/>
                         <PlayCircleFilledIcon/>
                     </CardActions>
                 </Card>

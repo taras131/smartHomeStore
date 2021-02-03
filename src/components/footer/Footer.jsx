@@ -8,7 +8,6 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import FolderIcon from '@material-ui/icons/Folder';
 
 const useStyles = makeStyles((theme) => ({
-    root: {},
     footerWrapper:{
         marginTop: theme.spacing(6)
     }

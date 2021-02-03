@@ -4,6 +4,7 @@ import React from "react";
 import backgroundprojectimg from "../../img/backgroundprojectimg.jpg";
 import {useSelector} from "react-redux";
 import ProjectItem from "./ProjectItem";
+import {Link as RouterLink} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     subheader: {
@@ -44,7 +45,9 @@ const Project = () => {
                                     проектирования, работает по проводам, закладывается на этапе черновой отделки и
                                     внедряется профессиональной командой.
                                 </Typography>
-                                <Button color="secondary" variant="contained">Связаться с нами</Button>
+                                <Button component={RouterLink} to="/contacts/" color="secondary" variant="contained">
+                                    Связаться с нами
+                                </Button>
                             </div>
                         </Grid>
                     </Grid>

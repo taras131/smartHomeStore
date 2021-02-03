@@ -33,7 +33,7 @@ const EmptyCart = () => {
                                     Вероятней всего, вы ещё ничего заказывали.<br/>
                                     Для того, чтобы сделать заказ, перейди на главную страницу.
                                 </Typography>
-                                <Button color="secondary" component={RouterLink} to="/">
+                                <Button variant="contained" color="secondary" component={RouterLink} to="/">
                                     Вернуться на главную
                                 </Button>
                             </div>

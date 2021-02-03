@@ -66,9 +66,6 @@ const ProjectItem = (props) => {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color="primery">
-                                        Просмотреть
-                                    </Button>
                                 </CardActions>
                             </Card>
                         </Paper>
