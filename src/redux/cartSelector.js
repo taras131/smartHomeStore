@@ -20,4 +20,4 @@ export const getItemCount =(state, id) =>{
     if(item){
         return item.count
     }
-}git a
+}
