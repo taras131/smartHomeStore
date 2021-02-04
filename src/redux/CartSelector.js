@@ -1,8 +1,6 @@
-
 export const getCartList = (state) => {
     return [...state.cartInfo.cartList.values()];
 }
-
 export const getCountAllCart = (state) => {
     let count = 0;
     ([...state.cartInfo.cartList.values()]).forEach(value => {
@@ -10,7 +8,6 @@ export const getCountAllCart = (state) => {
     })
     return count
 }
-
 export const getSumAllPriceCart = (state) => {
     let sum = 0;
     ([...state.cartInfo.cartList.values()]).forEach(value => {
@@ -23,4 +20,4 @@ export const getItemCount =(state, id) =>{
     if(item){
         return item.count
     }
-}
+}git a
