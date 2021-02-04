@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751ab3bf-1283-4481-960f-11fd57ad8877" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/redux/contactReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/cartSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/cartSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contacts/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contacts/Contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/CartSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/CartSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +87,7 @@
       <workItem from="1612372552358" duration="583000" />
       <workItem from="1612373170580" duration="12304000" />
       <workItem from="1612423847907" duration="20756000" />
-      <workItem from="1612446571147" duration="69000" />
+      <workItem from="1612446571147" duration="2406000" />
     </task>
     <servers />
   </component>

@@ -6,6 +6,7 @@ import PhoneCallbackIcon from '@material-ui/icons/PhoneCallback';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import QueryBuilderIcon from '@material-ui/icons/QueryBuilder';
 import ContactForm from "./ContactForm";
+import {useSelector} from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
@@ -23,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 const Contacts = () => {
     const classes = useStyles()
+    const {workingHours, address, phone, email} = useSelector(state=> state.contactInfo)
     return (
         <div>
             <Paper className={classes.wrapper}>
@@ -43,7 +45,7 @@ const Contacts = () => {
                                         </Grid>
                                         <Grid item xs zeroMinWidth>
                                             <Typography noWrap>
-                                                График работы: пн-вс, с 8:00 до 21:00 (мск)
+                                                График работы: {workingHours}
                                             </Typography>
                                         </Grid>
                                     </Grid>
@@ -53,7 +55,7 @@ const Contacts = () => {
                                         </Grid>
                                         <Grid item xs zeroMinWidth>
                                             <Typography noWrap>
-                                                Москва, Россия, 119019 Кремлёвская набережная, 1с3
+                                                {address}
                                             </Typography>
                                         </Grid>
                                     </Grid>
@@ -63,7 +65,7 @@ const Contacts = () => {
                                         </Grid>
                                         <Grid item>
                                             <Typography noWrap>
-                                                8(800)80000000000
+                                                {phone}
                                             </Typography>
                                         </Grid>
                                     </Grid>
@@ -73,7 +75,7 @@ const Contacts = () => {
                                         </Grid>
                                         <Grid item>
                                             <Typography noWrap>
-                                                example@mail.com
+                                                {email}
                                             </Typography>
                                         </Grid>
                                     </Grid>
