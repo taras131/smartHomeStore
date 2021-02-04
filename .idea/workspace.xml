@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751ab3bf-1283-4481-960f-11fd57ad8877" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/alertReducer.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/authReducer.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/cartReducer.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/catalogReducer.tesr.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Success.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Success.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/cartReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/cartReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/cartSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/cartSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/catalogReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/catalogReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +132,7 @@
       <workItem from="1612372552358" duration="583000" />
       <workItem from="1612373170580" duration="12304000" />
       <workItem from="1612423847907" duration="20756000" />
-      <workItem from="1612446571147" duration="10372000" />
+      <workItem from="1612446571147" duration="10695000" />
     </task>
     <servers />
   </component>
