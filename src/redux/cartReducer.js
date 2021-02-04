@@ -1,10 +1,10 @@
 const ADD_CART = "ADD_CART",
     DELETE_ITEM_CART = "DELETE_ITEM_CART",
     PLUS_ITEM_CART =    "PLUS_ITEM_CART",
-    MINUS_ITEM_CART = "MINUS_ITEM_CART"
+    MINUS_ITEM_CART = "MINUS_ITEM_CART",
+    DELETE_ALL_ITEM = "DELETE_ALL_ITEM"
 const initialState = {
-    cartList: new Map(),
-    totalCartCount: 0
+    cartList: new Map()
 }
 const cartReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -28,6 +28,8 @@ const cartReducer = (state = initialState, action) => {
         case MINUS_ITEM_CART:
             return {...state,cartList: new Map(state.cartList).set(action.id,
                     {...new Map(state.cartList).get(action.id), count:state.cartList.get(action.id).count - 1 })}
+        case DELETE_ALL_ITEM:
+            return {...state, cartList: new Map()}
         default:
             return state
     }
@@ -43,5 +45,8 @@ export const plusItemCart = (id) =>{
 }
 export const minusItemCart = (id) =>{
     return {type: MINUS_ITEM_CART, id}
+}
+export const deleteAllItem = (id) =>{
+    return {type: DELETE_ALL_ITEM, id}
 }
 export default cartReducer

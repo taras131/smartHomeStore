@@ -1,5 +1,5 @@
 import {makeStyles} from "@material-ui/core/styles";
-import {BottomNavigationAction,Typography} from "@material-ui/core";
+import {BottomNavigationAction, Hidden, Typography} from "@material-ui/core";
 import {BottomNavigation} from "@material-ui/core";
 import React from "react";
 import HomeIcon from "@material-ui/icons/Home";
@@ -11,25 +11,29 @@ import {Link as RouterLink} from "react-router-dom";
 import {useLocation} from "react-router";
 
 const useStyles = makeStyles((theme) => ({
-    footerWrapper:{
-        marginTop: theme.spacing(6)
+    footerWrapper: {
+        marginTop: theme.spacing(4)
     }
 }))
 const FooterComponent = () => {
     const classes = useStyles()
     return (
         <footer className={classes.footerWrapper}>
-            <BottomNavigation value={useLocation().pathname}  className={classes.root}>
+            <BottomNavigation value={useLocation().pathname}>
                 <BottomNavigationAction label="Главная" value="/" icon={<HomeIcon/>}
                                         component={RouterLink} to="/"/>
                 <BottomNavigationAction label="Каталог" value="/catalog/" icon={<MenuBookIcon/>}
                                         component={RouterLink} to="/catalog/"/>
+                <Hidden xsDown>
                 <BottomNavigationAction label="Проекты" value="/project/" icon={<PostAddIcon/>}
                                         component={RouterLink} to="/project/"/>
+                </Hidden>
                 <BottomNavigationAction label="Контакты" value="/contacts/" icon={<ContactPhoneIcon/>}
                                         component={RouterLink} to="/contacts/"/>
-                <BottomNavigationAction label="Корзина" value="/cart/" icon={<ShoppingCartIcon/>}
-                                        component={RouterLink} to="/cart/"/>
+                <Hidden smDown>
+                    <BottomNavigationAction label="Корзина" value="/cart/" icon={<ShoppingCartIcon/>}
+                                            component={RouterLink} to="/cart/"/>
+                </Hidden>
             </BottomNavigation>
             <Typography style={{marginTop: 10}} align="center" color="textSecondary" component="p" variant="subtitle1">
                 разработано z-студия 2021 | support mossnabitkana@gmail.com

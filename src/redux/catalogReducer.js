@@ -1,6 +1,4 @@
-
-
-const ADD_CATALOG = "ADD_CATALOG"
+const SET_CATALOG = "SET_CATALOG"
 const initialState = {
     catalogList: [
         {
@@ -100,14 +98,14 @@ const initialState = {
 }
 const catalogReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_CATALOG:
+        case SET_CATALOG:
             return {...state, catalogList: [...state.catalogList, action.value]}
         default:
             return state
     }
 }
-export const addCard = (value) => {
-    return {type: ADD_CATALOG, value}
+export const setCatalog = (value) => {
+    return {type: SET_CATALOG, value}
 }
 
 export default catalogReducer

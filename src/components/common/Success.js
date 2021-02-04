@@ -22,7 +22,6 @@ export default function DirectionSnackbar() {
     }
     return (
         <div>
-            <Button onClick={handleClick( <Slide  direction="down"/>)}>Down</Button>
             <Snackbar
                 open={open}
                 TransitionComponent={transition}
