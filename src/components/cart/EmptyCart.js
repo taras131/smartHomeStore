@@ -1,7 +1,7 @@
 import {Button, Container, Grid, Paper, Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import empty from "../../img/cartEmpty.png";
-import { Link as RouterLink } from 'react-router-dom';
+import {Link as RouterLink} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     cartEmptyWrapper: {

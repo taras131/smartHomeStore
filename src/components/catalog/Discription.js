@@ -1,11 +1,11 @@
-import {Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Typography} from "@material-ui/core";
+import {Button, Container, Grid, Typography} from "@material-ui/core";
 import React from "react";
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import {getCatalogItem} from "../../redux/catalogSelector";
-import {addCart} from "../../redux/cartReducer";
 import {makeStyles} from "@material-ui/core/styles";
 import {useLocation} from "react-router";
 import {Link as RouterLink} from "react-router-dom";
+import ButtonBuy from "../common/ButtonBuy";
 
 const useStyles = makeStyles((theme) => ({
     media: {
@@ -25,12 +25,8 @@ const useStyles = makeStyles((theme) => ({
 }))
 const Discription = (props) => {
     const classes = useStyles()
-    const dispatch = useDispatch()
     let id = +useLocation().pathname.split("/").pop()
     const item = useSelector(state => getCatalogItem(state, id))
-    const onAddClick = () => {
-        dispatch(addCart({...item}))
-    }
     return (
         <Container style={{marginTop: 140}}  fixed>
             <Grid  container spacing={4}>
@@ -52,7 +48,9 @@ const Discription = (props) => {
                 </Grid>
                 <Grid style={{marginTop: 20}} container spacing={5} justify="center">
                     <Grid item >
-                        <Button component={RouterLink} to={`/catalog/`} size="small" color="primary">
+                        <Button component={RouterLink} to={props.location.path
+                            ?`${props.location.path}`
+                            :`/catalog/`} size="small" color="primary">
                             Назад
                         </Button>
                     </Grid>
@@ -62,9 +60,7 @@ const Discription = (props) => {
                         </Typography>
                     </Grid>
                     <Grid item >
-                        <Button variant="contained" color="primary" onClick={onAddClick} size="small">
-                            Купить
-                        </Button>
+                        <ButtonBuy {...item}/>
                     </Grid>
                 </Grid>
             </Grid>

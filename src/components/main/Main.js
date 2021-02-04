@@ -1,4 +1,4 @@
-import {Button, Container, Grid, Grow, Paper, Typography} from "@material-ui/core";
+import {Button, Container, Grid, Paper, Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import backgroundimg from "../../img/header.jpg";
 import {Link as RouterLink} from "react-router-dom";

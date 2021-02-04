@@ -7,6 +7,7 @@ import Project from "./components/project/Project";
 import Contacts from "./components/contacts/Contacts";
 import Catalog from "./components/catalog/Catalog";
 import Discription from "./components/catalog/Discription";
+import Alert from "./components/common/Success";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                 <Route exact path="/contacts/" component={Contacts}/>
                 <Route exact path="/cart/" component={Cart}/>
             </Switch>
+            <Alert />
             <FooterComponent/>
         </>
     );

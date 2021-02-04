@@ -1,11 +1,14 @@
 import {makeStyles} from "@material-ui/core/styles";
-import {BottomNavigationAction, Container, Typography} from "@material-ui/core";
+import {BottomNavigationAction,Typography} from "@material-ui/core";
 import {BottomNavigation} from "@material-ui/core";
-import {useState} from "react";
-import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-import FolderIcon from '@material-ui/icons/Folder';
+import React from "react";
+import HomeIcon from "@material-ui/icons/Home";
+import MenuBookIcon from "@material-ui/icons/MenuBook";
+import PostAddIcon from "@material-ui/icons/PostAdd";
+import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import {Link as RouterLink} from "react-router-dom";
+import {useLocation} from "react-router";
 
 const useStyles = makeStyles((theme) => ({
     footerWrapper:{
@@ -14,20 +17,22 @@ const useStyles = makeStyles((theme) => ({
 }))
 const FooterComponent = () => {
     const classes = useStyles()
-    const [value, setValue] = useState("recents")
-    const handleChange = (event, newValue) => {
-        setValue(newValue)
-    }
     return (
         <footer className={classes.footerWrapper}>
-            <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
-                <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon/>}/>
-                <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon/>}/>
-                <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon/>}/>
-                <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon/>}/>
+            <BottomNavigation value={useLocation().pathname}  className={classes.root}>
+                <BottomNavigationAction label="Главная" value="/" icon={<HomeIcon/>}
+                                        component={RouterLink} to="/"/>
+                <BottomNavigationAction label="Каталог" value="/catalog/" icon={<MenuBookIcon/>}
+                                        component={RouterLink} to="/catalog/"/>
+                <BottomNavigationAction label="Проекты" value="/project/" icon={<PostAddIcon/>}
+                                        component={RouterLink} to="/project/"/>
+                <BottomNavigationAction label="Контакты" value="/contacts/" icon={<ContactPhoneIcon/>}
+                                        component={RouterLink} to="/contacts/"/>
+                <BottomNavigationAction label="Корзина" value="/cart/" icon={<ShoppingCartIcon/>}
+                                        component={RouterLink} to="/cart/"/>
             </BottomNavigation>
-            <Typography align="center" color="textSecondary" component="p" variant="subtitle1">
-                разработано z-студия 2021
+            <Typography style={{marginTop: 10}} align="center" color="textSecondary" component="p" variant="subtitle1">
+                разработано z-студия 2021 | support mossnabitkana@gmail.com
             </Typography>
         </footer>
     )

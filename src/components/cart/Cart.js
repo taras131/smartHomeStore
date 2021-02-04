@@ -26,12 +26,12 @@ const Cart = () => {
     const cartList = useSelector(state => getCartList(state))
     const allCount = useSelector(state => getCountAllCart(state))
     const allPriceSum = useSelector(state => getSumAllPriceCart(state))
-    const cartItems = cartList.map(item => <CartItem {...item}/>)
+    const cartItems = cartList.map((item,index) => <CartItem key = {`${item.name}_${index}`} {...item}/>)
     if (allCount === 0) {
         return <EmptyCart/>
     }
     return (
-        <Container className={classes.cardGrid} maxWidth="md">
+        <Container maxWidth="md">
             <Grid justify="center" container spacing={4}>
                 <div align="center" className={classes.root}>
                     <List component="nav" aria-label="main mailbox folders">

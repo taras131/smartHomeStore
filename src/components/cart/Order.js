@@ -11,7 +11,6 @@ import React, {useState} from "react";
 import {makeStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-
     cardPrice: {
         marginTop: theme.spacing(2)
     }
@@ -52,7 +51,6 @@ const Order = (props) => {
                     <TextField autoFocus margin="dense" label="Email" type="email" fullWidth/>
                     <TextField margin="dense" label="Telefon" type="tel" fullWidth/>
                     <TextField margin="dense" label="First Name" type="text" fullWidth/>
-
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose} color="primary">Отмена</Button>

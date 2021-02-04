@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 const Project = () => {
     const classes = useStyles();
     const projectList = useSelector(state => state.projectInfo.projectList)
-    const projectItems = projectList.map(item => <ProjectItem {...item}/>)
+    const projectItems = projectList.map((item,index) => <ProjectItem key = {`${item.name}_${index}`} {...item}/>)
     return (
         <div>
             <Paper className={classes.subheader} style={{backgroundImage: `url(${backgroundprojectimg})`}}>
